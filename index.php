@@ -183,6 +183,28 @@
 			<img src="/images/graphic.png" alt="Ukázka grafické práce" width="" height=""/>
 		</div>
 	</div>
+  <? endif;
+  
+  if($_GET["page"]=="contact"): ?>
+    <h1> Contact Us </h1>
+    
+    <ul>
+        <li>Lukáš Krotovič - krotovicl@hotmail.com</li>
+        <li>Petr Križek - krizek@lmntstudio.cz</li>
+    </ul>
+    
+    <div id="contact_form">
+    <form>
+    <label>Jméno a příjmení: </label><input type="text">
+    <label>Email od: </label><input type="text">
+    <label>Email pro: </label><span>krotovicl@hotmail.com</span>
+    <label>Hlavička: </label><input type="text">
+    <label>Zpráva: </label><input type="textarea" cols="50" rows="10"></textarea>
+    <input type="submit">
+    </form>
+    </div>
+  
+  <? endif;?>
 </div>
 <div class="float-ending"><!-- --></div>
 
