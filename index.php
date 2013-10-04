@@ -11,7 +11,24 @@
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta itemprop="name" content="LmntStudio">
 <meta itemprop="description" content="LmntStudio Official Page">
-<?if($_GET["page"]=="lmntcms"):?><script src=js.js></script><?endif;?>
+<?if($_GET["page"]=="lmntcms"):?>
+<script src="js.js"></script>
+<script type="text/javascript">
+	int count=1;
+	previous(){
+		document.getElementById("lmntcms_intro_img_change").src="/images/lmntcms"+count+".png";
+		count--;
+		if(count>=3) count=1;
+		if(count<=1) count=3;
+	}
+	next(){
+		document.getElementById("lmntcms_intro_img_change").src="/images/lmntcms"+count+".png";
+		count++;
+		if(count>=3) count=1;
+		if(count<=1) count=3;
+	}
+</script>
+<?endif;?>
 </head>
 <body>
 
@@ -86,7 +103,9 @@
 			Jednoduchá a přehledná administrace
 		</p>
 		<div id="lmntcms_intro_img">
-			<img src="/images/lmntcms_intro.png" alt="LmntCMS Screenshot" width="" height="" />
+			<div onclick="previous()">&lt;</div>
+			<img src="/images/lmntcms_intro.png" id="lmntcms_intro_img_change" alt="LmntCMS Screenshot" width="" height="" />
+			<div onclick="next()">&gt;</div>
 		</div>
 	</div>
 	<div id="lmntcms_plans">
@@ -148,7 +167,22 @@
 			<img alt="Správa webu"/>
 		</div>
 	</div>
-	<? endif; ?>
+	<? endif; //-------------- GRAPHIC -------------
+	if($_GET["page"]=="graphic"): ?>
+	<div id="graphic_intro">
+		<span>Můžeme Vám vytvořit internetovou reklamu na míru.</span>
+		<p>
+			<strong>Upozornění:</strong> Nejsme plátci DPH. Každá služba bude provedena na základě dohody o provedení práce.
+		</p>
+	</div>
+	<div id="graphic_ref">
+		<p>
+			Ukázka naší grafické práce.
+		</p>
+		<div id="graphic_ref_img">
+			<img src="/images/graphic.png" alt="Ukázka grafické práce" width="" height=""/>
+		</div>
+	</div>
 </div>
 <div class="float-ending"><!-- --></div>
 
